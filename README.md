@@ -18,7 +18,10 @@
   - [x] Campos obrigatórios;
   - [x] Formato padrão de e-mail;
   - [x] Conexão de envio dos dados para armazenamento e consulta;
+
+### Melhorando o projeto:
   - [x] Aplicado metodologia BEM CSS;
+  - [x] Adicionado controle de envio dos dados com JS;
 
 ## Tecnologias
 
