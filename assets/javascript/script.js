@@ -60,6 +60,7 @@
                         name: userNameValue,
                         email: userEmailValue,
                         message: userMessageValue,
+                        date: new Date().toLocaleString(),
                     }
                 ),
             },
