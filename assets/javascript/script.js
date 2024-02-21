@@ -14,7 +14,7 @@
     };
 
     const renderButton = {
-        image: '<img class="c-section-contact__button" src="./assets/images/loading.png" alt="Loading">',
+        image: '<img class="c-section-contact__button--animation" src="./assets/images/loading.png" alt="Loading">',
         message: 'SEND MESSAGE'
     };
 
