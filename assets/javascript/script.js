@@ -9,9 +9,16 @@ const removedLoad = () => {
     buttonForm.innerHTML = 'SEND MESSAGE';
 };
 
-const delay = () => {
+const delaySuccess = () => {
     setTimeout(() => {
         window.location.href = 'https://leojosants.github.io/stackx_projeto_developer_portfolio/success_page.html';
+        removedLoad();
+    }, 1000);
+}
+
+const delayError = () => {
+    setTimeout(() => {
+        window.location.href = 'https://leojosants.github.io/stackx_projeto_developer_portfolio/error_page.html';
         removedLoad();
     }, 1000);
 }
@@ -24,7 +31,7 @@ const handleSubmit = (event) => {
     const userEmail = document.querySelector('[js_data_email]').value;
     const userMessage = document.querySelector('[js_data_message]').value;
 
-    fetch('https://api.sheetmonkey.io/form/nSQ3FU9Kaomuj8BHtUQncR',
+    fetch('ghttps://api.sheetmonkey.io/form/nSQ3FU9Kaomuj8BHtUQncR',
         {
             method: 'post',
             headers: {
@@ -37,7 +44,9 @@ const handleSubmit = (event) => {
                 message: userMessage,
             })
         },
-    ).then(() => delay());
+    )
+        .then(() => delaySuccess())
+        .catch(() => delayError());
 };
 
 
