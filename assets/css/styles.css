@@ -224,7 +224,7 @@ nav i {
     text-transform: var(--text-transform-uppercase);
 }
 
-.c-section-contact__button {
+.c-section-contact__button--animation {
     width: 30px;
     animation: spin 1s infinite linear;
 }
