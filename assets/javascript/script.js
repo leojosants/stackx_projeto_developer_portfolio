@@ -11,7 +11,7 @@ const removedLoad = () => {
 
 const delay = () => {
     setTimeout(() => {
-        window.location.href = '/success_page.html';
+        window.location.href = 'https://leojosants.github.io/stackx_projeto_developer_portfolio/success_page.html';
         removedLoad();
     }, 1000);
 }
