@@ -402,7 +402,7 @@
 						soon as possible.
 					</p>
 				</div>
-				
+
 				<form>
 					<input
 						class="c-section-contact__input--focus"
@@ -411,7 +411,6 @@
 						id="name"
 						placeholder="NAME"
 						js_data_name
-						required
 					/>
 
 					<br />
@@ -421,9 +420,10 @@
 						type="email"
 						name="email"
 						id="email"
+						pattern="^[^@]+@[^@]+\.[^@]+$"
+						title="Enter a valid email, including the symbol @."
 						placeholder="EMAIL"
 						js_data_email
-						required
 					/>
 
 					<br />
@@ -435,7 +435,6 @@
 						id="message"
 						placeholder="MESSAGE"
 						js_data_message
-						required
 					/>
 
 					<br />
@@ -453,6 +452,22 @@
 		</section>
 
 		<hr class="c-body__hr" />
+
+		<section class="c-body__section-popup-container" js_data_popup_container>
+			<div class="c-section-popup-container__content">
+				<h2
+					class="c-section-popup-container__h2"
+					js_data_popup_message
+				></h2>
+				<button
+					class="c-section-popup-container__button c-section-popup-container__button--hover"
+					type="button"
+					js_data_popup_button
+				>
+					OK
+				</button>
+			</div>
+		</section>
 
 		<footer class="c-body__footer">
 			<h1>leonardo_santos</h1>
