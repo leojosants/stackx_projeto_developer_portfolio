@@ -23,7 +23,7 @@ const renderButton = {
             alt="Loading"
         />
     `,
-    message: 'SEND MESSAGE'
+    message: 'SUCCESS'
 };
 
 const displayPopup = (message) => {
@@ -34,6 +34,13 @@ const displayPopup = (message) => {
 
 const addLoadImage = () => {
     htmlElements.formButton.innerHTML = renderButton.image;
+};
+
+const clearFormAndDisableButton = () => {
+    htmlElements.formButton.style.pointerEvents = 'none';
+    setTimeout(() => { htmlElements.formUserName.value = ''; }, 700);
+    setTimeout(() => { htmlElements.formUserEmail.value = ''; }, 900);
+    setTimeout(() => { htmlElements.formUserMessage.value = ''; }, 1100);
 };
 
 const removedLoadImage = () => {
@@ -59,8 +66,7 @@ const handleSubmit = (event) => {
     const userNameValue = htmlElements.formUserName.value;
     const userEmailValue = htmlElements.formUserEmail.value;
     const userMessageValue = htmlElements.formUserMessage.value;
-    
-    
+
     if (!userNameValue) {
         displayPopup('NAME field is empty!');
         return;
@@ -78,7 +84,7 @@ const handleSubmit = (event) => {
 
     addLoadImage();
 
-    htmlElements.formButton.style.pointerEvents = 'none';
+    clearFormAndDisableButton();
 
     fetch(adresses.api,
         {
