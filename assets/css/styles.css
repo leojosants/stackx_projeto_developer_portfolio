@@ -248,6 +248,55 @@ button.c-body__emphasis {
     margin: 20px;
 }
 
+.c-body__section-popup-container {
+    background-color: rgba(10, 10, 10, 0.934);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    padding: 200px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.c-section-popup-container__content {
+    background-color: var(--color-5fdce541);
+    position: absolute;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+}
+
+.c-section-popup-container__h2 {
+    text-align: center;
+    font-size: 100%;
+}
+
+.c-section-popup-container__button {
+    background-color: var(--color-ACACAC);
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.c-section-popup-container__button--hover:hover {
+    background-color: var(--color-FCFCFC);
+}
+
 .c-body__footer {
     text-align: center;
     padding: 20px 0 40px;
@@ -330,6 +379,10 @@ button.c-body__emphasis {
 
     .c-body__section-about div {
         flex: 1;
+    }
+
+    .c-section-contact__button--animation {
+        margin: 0;
     }
 }
 
