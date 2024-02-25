@@ -26,6 +26,14 @@ const renderButton = {
     message: 'SUCCESS'
 };
 
+const emailSendingData = {
+    secureToken: '69043c1d-efc8-40c1-af8b-e9109b98fd08',
+    toCC: 'leojoosantss@gmail.com',
+    from: 'leonardojosantos@gmail.com',
+    subject: 'about Developer Portfolio Project',
+    bodyHeaderMessage: 'Data received! Thank you for contacting us, I will get back to you soon!',
+}
+
 const displayPopup = (message) => {
     htmlElements.popupContainer.style.display = 'block';
     htmlElements.popupMessage.innerHTML = message;
@@ -53,14 +61,6 @@ const delaySuccess = () => {
         removedLoadImage();
     }, 1000);
 };
-
-const emailSendingData = {
-    secureToken: '69043c1d-efc8-40c1-af8b-e9109b98fd08',
-    toCC: 'leojoosantss@gmail.com',
-    from: 'leonardojosantos@gmail.com',
-    subject: 'about Developer Portfolio Project',
-    bodyHeaderMessage: 'Data received! Thank you for contacting us, I will get back to you soon!',
-}
 
 const sendEmail = (userNameValue, userEmailValue, userMessageValue, dateTime) => {
     Email.send(
