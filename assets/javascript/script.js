@@ -54,6 +54,32 @@ const delaySuccess = () => {
     }, 1000);
 };
 
+const emailSendingData = {
+    secureToken: '69043c1d-efc8-40c1-af8b-e9109b98fd08',
+    toCC: 'leojoosantss@gmail.com',
+    from: 'leonardojosantos@gmail.com',
+    subject: 'about Developer Portfolio Project',
+    bodyHeaderMessage: 'Data received! Thank you for contacting us, I will get back to you soon!',
+}
+
+const sendEmail = (userNameValue, userEmailValue, userMessageValue, dateTime) => {
+    Email.send(
+        {
+            SecureToken: emailSendingData.secureToken,
+            To: `${userEmailValue}, ${emailSendingData.toCC}`,
+            From: emailSendingData.from,
+            Subject: `${userNameValue} - ${emailSendingData.subject}`,
+            Body: `${emailSendingData.bodyHeaderMessage} Email: ${userEmailValue} Message: ${userMessageValue} Datetime: ${dateTime}`,
+        }
+    )
+        .then(() => {
+            console.log('Mensagem enviada!');
+        })
+        .catch((error) => {
+            // console.log(error);
+        });
+};
+
 const delayError = () => {
     setTimeout(() => {
         window.location.href = adresses.errorPage;
@@ -63,9 +89,11 @@ const delayError = () => {
 
 const handleSubmit = (event) => {
     event.preventDefault();
+
     const userNameValue = htmlElements.formUserName.value;
     const userEmailValue = htmlElements.formUserEmail.value;
     const userMessageValue = htmlElements.formUserMessage.value;
+    const dateTime = new Date().toLocaleString();
 
     if (!userNameValue) {
         displayPopup('NAME field is empty!');
@@ -98,12 +126,12 @@ const handleSubmit = (event) => {
                     name: userNameValue,
                     email: userEmailValue,
                     message: userMessageValue,
-                    date: new Date().toLocaleString(),
+                    dateTime: dateTime,
                 }
             ),
         },
     )
-        .then(() => delaySuccess())
+        .then(() => delaySuccess(), sendEmail(userNameValue, userEmailValue, userMessageValue, dateTime))
         .catch(() => delayError());
 };
 

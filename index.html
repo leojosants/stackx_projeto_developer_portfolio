@@ -33,6 +33,8 @@
 		<link rel="stylesheet" href="./assets/css/styles.css" />
 
 		<!-- scripts -->
+		<!-- api email -->
+		<script src="https://smtpjs.com/v3/smtp.js" defer></script>
 		<script src="./assets/javascript/script.js" defer></script>
 
 		<title>Leonardo Santos' portfolio</title>
@@ -403,13 +405,14 @@
 					</p>
 				</div>
 
-				<form>
+				<form autocomplete="on">
 					<input
 						class="c-section-contact__input--focus"
 						type="text"
 						name="name"
 						id="name"
 						placeholder="NAME"
+						autocomplete="name"
 						js_data_name
 					/>
 
@@ -423,6 +426,7 @@
 						pattern="^[^@]+@[^@]+\.[^@]+$"
 						title="Enter a valid email, including the symbol @."
 						placeholder="EMAIL"
+						autocomplete="email"
 						js_data_email
 					/>
 

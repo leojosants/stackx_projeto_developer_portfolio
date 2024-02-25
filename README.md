@@ -19,9 +19,11 @@
   - [x] Formato padrão de e-mail;
   - [x] Conexão de envio dos dados para armazenamento e consulta;
 
-### Melhorando o projeto:
-  - [x] Aplicado metodologia BEM CSS;
-  - [x] Adicionado controle de envio dos dados com JS;
+### Melhorando o projeto
+
+- [x] Aplicado metodologia BEM CSS;
+- [x] Adicionado validação, controle de envio e armazenamento dos dados do formulário com JS;
+- [x] Adiciondo serviço de envio de email com JavaScript;
 
 ## Tecnologias
 
